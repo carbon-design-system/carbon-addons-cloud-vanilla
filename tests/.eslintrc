@@ -1,0 +1,8 @@
+{
+  "root": false,
+  "rules": {
+    "func-names": 0,
+    "no-var": 0,
+    "strict": 0
+  }
+}

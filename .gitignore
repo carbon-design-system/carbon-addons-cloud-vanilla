@@ -1,0 +1,34 @@
+# Hide package manager
+node_modules
+.npmrc
+
+# Ignore built files and static folder
+demo/*.css
+demo/*.map
+demo/*.js
+!demo/index.js
+dist
+
+# OSX
+.DS_Store
+
+# Debug
+npm-debug.log
+
+# Editors
+project.sublime-project
+project.sublime-workspace
+jsconfig.json
+.vscode
+
+# Test reports
+tests/coverage
+
+# built files
+/es
+/umd
+/scripts
+/css/**
+/scss
+/html
+/docs/js

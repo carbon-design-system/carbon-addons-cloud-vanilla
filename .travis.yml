@@ -1,0 +1,53 @@
+language: node_js
+
+cache:
+  directories:
+  - node_modules
+
+env:
+  - TEST_SUITE=misc
+  - TEST_SUITE=unit
+  - TEST_SUITE=unit-sauce
+  - TEST_SUITE=unit-each
+  - TEST_SUITE=a11y
+
+node_js:
+  - "6"
+
+dist: trusty
+
+addons:
+  apt:
+    packages:
+      - google-chrome-stable
+  firefox: "latest-esr"
+
+matrix:
+  exclude:
+  - env: TEST_SUITE=unit-each
+  allow_failures:
+  - env: TEST_SUITE=unit-each
+  - env: TEST_SUITE=a11y
+
+before_install:
+  - tar -xjf /tmp/firefox-latest-esr.tar.bz2 --directory /tmp
+  - export PATH="/tmp/firefox:$PATH"
+  - export CHROME_BIN=google-chrome
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+install:
+  - npm prune
+  - npm install || (cat npm-debug.log; false)
+  - if [[ -n "${AAT_TOKEN}" && "$TEST_SUITE" == "a11y" ]]; then npm i https://aat.mybluemix.net/dist/karma-ibma.tgz; fi
+
+script:
+  - if [[ "$TEST_SUITE" == "misc" ]]; then npm run lint; npm run build; fi
+  - if [[ "$TEST_SUITE" == "unit" ]]; then npm run test:unit -- -b PhantomJS -b Chrome -b Firefox; fi
+  - if [[ "$TEST_SUITE" == "unit-sauce" && -n "${SAUCE_ACCESS_KEY}" ]]; then npm run test:unit -- -s -d -b Chrome -b Firefox -b Safari -b MicrosoftEdge -b IE; fi
+  - if [[ "$TEST_SUITE" == "unit-each" ]]; then find tests/spec -name "*.js" ! -name left-nav_spec.js -print0 | xargs -0 -n 1 -P 1 npm run test:unit -- -d -f; fi
+  - if [[ -n "${AAT_TOKEN}" && "$TEST_SUITE" == "a11y" ]]; then npm run test:a11y; fi
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

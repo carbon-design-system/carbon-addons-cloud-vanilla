@@ -1,0 +1,159 @@
+@import 'carbon-components/scss/globals/scss/styles';
+
+.demo--container {
+  box-sizing: border-box;
+  padding-top: 1em;
+  transition: .2s;
+  background-color: $ui-02;
+
+  .demo--collapsed & {
+    padding-left: 3rem;
+  }
+
+  .demo--standalone & {
+    padding-left: 0;
+  }
+}
+
+.demo--container__panel {
+  @include grid-container;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  // min-height: 2000px;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .demo--container.flex-col & {
+    flex-direction: column;
+    margin: 0 auto;
+
+    & > * {
+      margin: 1rem 0;
+    }
+  }
+
+  .demo--container.flex-row & {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    & > * {
+      margin: 1rem;
+    }
+  }
+
+  &.mobile {
+    max-width: 600px;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.bx--global-header--demo {
+  top: 0;
+  height: 5.375em;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  z-index: 0;
+}
+
+.demo-switcher {
+  &__container {
+    display: flex;
+    align-items: center;
+
+    label {
+      color: #fff;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.demo--standalone {
+  .test-header {
+    position: fixed;
+    background-color: $ui-05;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 86px;
+    z-index: 8000;
+  }
+
+  .test-nav {
+    position: fixed;
+    background-color: $ui-04;
+    width: 200px;
+    height: calc(100vh - 86px);
+    bottom: 0;
+    left: 0;
+    z-index: 8000;
+  }
+}
+
+.demo--navigated {
+  .test-header {
+    display: none;
+  }
+
+  .test-nav {
+    display: none;
+  }
+
+  .demo--container {
+    padding-left: 12.5rem;
+  }
+
+  .bx--detail-page-header--with-tabs {
+    margin-left: 12.5em;
+  }
+
+  &.demo--collapsed .bx--detail-page-header--with-tabs {
+    margin-left: 3rem;
+  }
+}
+
+// carbon-components no longer owns alternate theme, hiding the theme switcher for now
+.theme-switcher {
+  .demo--navigated &,
+  .demo--standalone & {
+    display: none;
+  }
+}
+
+.bx--row {
+  min-height: 50px;
+}
+
+[class*="bx--col"] {
+  background-color: $color__gray-1;
+
+  p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.col-example {
+  background-color: rgba(blue, 0.2);
+  height: 100%;
+}
+
+.red {
+  background-color: rgba(red, 0.2);
+}
+
+.green {
+  background-color: rgba(green, 0.2);
+}
+
+.indigo {
+  background-color: rgba(indigo, 0.2);
+}
