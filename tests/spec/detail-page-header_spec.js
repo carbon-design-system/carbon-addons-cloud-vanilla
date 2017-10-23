@@ -1,4 +1,3 @@
-import 'core-js/modules/es6.weak-map'; // For PhantomJS
 import DetailPageHeader from '../../src/components/detail-page-header/detail-page-header';
 
 describe('Test detail page header', function() {
@@ -18,10 +17,7 @@ describe('Test detail page header', function() {
     });
 
     it('Should set default options', function() {
-      expect(
-        (detailPageHeader = new DetailPageHeader(document.createElement('div')))
-          .options
-      ).to.deep.equal({
+      expect((detailPageHeader = new DetailPageHeader(document.createElement('div'))).options).to.deep.equal({
         selectorInit: '[data-detail-page-header]',
         scroll: 'bx--detail-page-header--scroll',
       });
