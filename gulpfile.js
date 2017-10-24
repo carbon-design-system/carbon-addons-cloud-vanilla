@@ -9,7 +9,6 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // Javascript deps
 const babel = require('gulp-babel');
-const eslint = require('gulp-eslint');
 const uglify = require('gulp-uglify');
 const pump = require('pump');
 
@@ -20,7 +19,6 @@ const browserSync = require('browser-sync').create();
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const gutil = require('gulp-util');
 const jsdoc = require('gulp-jsdoc3');
 
 // Generic utility
@@ -105,7 +103,10 @@ gulp.task('scripts:umd', () => {
     plugins: ['transform-es2015-modules-umd', 'transform-class-properties'],
   };
 
-  return gulp.src(srcFiles).pipe(babel(babelOpts)).pipe(gulp.dest('umd/'));
+  return gulp
+    .src(srcFiles)
+    .pipe(babel(babelOpts))
+    .pipe(gulp.dest('umd/'));
 });
 
 gulp.task('scripts:es', () => {
@@ -125,7 +126,10 @@ gulp.task('scripts:es', () => {
     plugins: ['transform-class-properties'],
   };
 
-  return gulp.src(srcFiles).pipe(babel(babelOpts)).pipe(gulp.dest('es/'));
+  return gulp
+    .src(srcFiles)
+    .pipe(babel(babelOpts))
+    .pipe(gulp.dest('es/'));
 });
 
 gulp.task('scripts:rollup', cb => {
@@ -223,35 +227,6 @@ gulp.task('html:source', () => {
 
   return gulp.src(srcFiles).pipe(gulp.dest('html'));
 });
-
-/**
- * Lint
- */
-
-gulp.task('lint', () =>
-  gulp
-    .src([
-      'gulpfile.js',
-      'server.js',
-      'src/**/*.js',
-      'tests/**/*.js',
-      'demo/**/*.js',
-    ])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-    .pipe(
-      eslint.results(results => {
-        const count = results.warningCount;
-        if (count > 0) {
-          throw new gutil.PluginError('gulp-eslint', {
-            name: 'ESLintWarning',
-            message: `Has ${count} warning${count > 1 ? 's' : ''}`,
-          });
-        }
-      })
-    )
-);
 
 /**
  * JSDoc
