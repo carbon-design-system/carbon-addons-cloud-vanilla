@@ -1,10 +1,5 @@
 @import 'carbon-components/scss/globals/scss/styles';
-
-@import '../../src/components/card/card';
-@import '../../src/components/detail-page-header/detail-page-header';
-@import '../../src/components/interior-left-nav/interior-left-nav';
-@import '../../src/components/module/module';
-@import '../../src/components/order-summary/order-summary';
+@import '../../src/globals/scss/styles';
 
 .demo--container {
   box-sizing: border-box;
