@@ -1,0 +1,64 @@
+@import 'carbon-components/scss/globals/scss/colors';
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+
+.cloud-header {
+  display: flex;
+  align-items: center;
+  background-color: $color__blue-90;
+  color: $inverse-01;
+  height: rem(48px);
+
+  a {
+    color: $inverse-01;
+    text-decoration: none;
+  }
+}
+
+.cloud-header__app {
+  display: flex;
+}
+
+.cloud-header__app-menu {
+  padding: 0 rem(12px);
+}
+
+.cloud-header__app-menu ~ .cloud-header-brand {
+  margin-left: rem(-12px);
+}
+
+.cloud-header-brand {
+  display: flex;
+  align-items: center;
+  padding-left: rem(12px);
+}
+
+.cloud-header-brand__icon {
+  padding-right: rem(10px);
+}
+
+.cloud-header__global {
+  display: flex;
+  margin-left: auto;
+}
+
+.cloud-header-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.cloud-header-list__item {
+  padding: 0 rem(16px);
+
+  .cloud-header-list--global & {
+    padding: 0 rem(12px);
+
+    &:last-child {
+      padding-right: rem(24px);
+    }
+  }
+}
+
+.bx--type-bold {
+  font-weight: 700;
+}
