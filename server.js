@@ -106,7 +106,8 @@ const topRouteHandler = (req, res) => {
               const firstLink = links[0];
               (firstLink.items
                 ? firstLink.items[0]
-                : firstLink).selected = true;
+                : firstLink
+              ).selected = true;
             }
             return links;
           })
