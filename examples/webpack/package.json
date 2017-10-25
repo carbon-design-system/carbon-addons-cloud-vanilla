@@ -13,7 +13,6 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "css-loader": "^0.28.7",
-    "eyeglass": "^1.3.0",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.8",

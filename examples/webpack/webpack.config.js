@@ -3,7 +3,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-const eyeglass = require('eyeglass');
 
 module.exports = {
   devtool: 'cheap-module-soruce-map',
