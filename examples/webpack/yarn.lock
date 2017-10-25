@@ -908,6 +908,14 @@ carbon-components@^7.0.0:
     flatpickr "2.6.3"
     lodash.debounce "^4.0.8"
 
+carbon-components@^7.26.5:
+  version "7.26.5"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-7.26.5.tgz#eb356b4341aa45c08e3ad12fff0267284cc46ef3"
+  dependencies:
+    carbon-icons "^6.0.4"
+    flatpickr "2.6.3"
+    lodash.debounce "^4.0.8"
+
 carbon-icons@^6.0.4:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/carbon-icons/-/carbon-icons-6.2.0.tgz#84f568a64b1465c52183eb26de736893b3d8abdb"

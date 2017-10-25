@@ -5,7 +5,8 @@
     "dev": "webpack-dev-server"
   },
   "dependencies": {
-    "carbon-addons-bluemix": "^0.1.0"
+    "carbon-addons-bluemix": "^0.1.0",
+    "carbon-components": "^7.26.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
