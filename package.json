@@ -16,8 +16,6 @@
     "eyeglass-module"
   ],
   "dependencies": {
-    "carbon-components": "^7.0.0",
-    "carbon-icons": "^6.0.4",
     "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
@@ -35,6 +33,7 @@
     "browser-sync": "~2.10.0",
     "chai": "^3.5.0",
     "core-js": "^2.4.0",
+    "carbon-components": "^7.26.5",
     "custom-event": "^1.0.0",
     "cz-conventional-changelog": "^1.2.0",
     "del": "~2.0.2",
@@ -96,6 +95,9 @@
     "sinon-chai": "^2.9.0",
     "validate-commit-msg": "^2.8.2",
     "vinyl-named": "^1.1.0"
+  },
+  "peerDependencies": {
+    "carbon-components": "^7.26.5"
   },
   "files": [
     "css/**/*",
