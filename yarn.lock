@@ -1107,12 +1107,6 @@ buffer-crc32@^0.2.1:
   version "0.2.13"
   resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
 
-bufferstreams@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/bufferstreams/-/bufferstreams-1.1.1.tgz#0161373060ac5988eff99058731114f6e195d51e"
-  dependencies:
-    readable-stream "^2.0.2"
-
 builtin-modules@^1.0.0, builtin-modules@^1.1.0, builtin-modules@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
@@ -1179,13 +1173,14 @@ caniuse-lite@^1.0.30000744:
   version "1.0.30000749"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000749.tgz#2ff382865aead8cca35dacfbab04f58effa4c01c"
 
-carbon-components@^7.0.0:
-  version "7.26.2"
-  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-7.26.2.tgz#cc15b2717b9ba70be31000546f9819a6dc034eb9"
+carbon-components@^8.0.0:
+  version "8.1.12"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-8.1.12.tgz#8c254e5739896e3130ee3cbcec26ae13f507f2ab"
   dependencies:
     carbon-icons "^6.0.4"
     flatpickr "2.6.3"
     lodash.debounce "^4.0.8"
+    warning "^3.0.0"
 
 carbon-icons@^6.0.4:
   version "6.2.0"
@@ -3175,14 +3170,6 @@ gulp-babel@^6.1.2:
     through2 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
-gulp-eslint@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/gulp-eslint/-/gulp-eslint-3.0.1.tgz#04e57e3e18c6974267c12cf6855dc717d4a313bd"
-  dependencies:
-    bufferstreams "^1.1.1"
-    eslint "^3.0.0"
-    gulp-util "^3.0.6"
-
 gulp-jsdoc3@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/gulp-jsdoc3/-/gulp-jsdoc3-0.2.1.tgz#cf595b1a3ccfa04f127a909892a4af489250cbf6"
@@ -3240,7 +3227,7 @@ gulp-uglify@^2.1.2:
     uglify-save-license "^0.4.1"
     vinyl-sourcemaps-apply "^0.2.0"
 
-gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.6, gulp-util@^3.0.7, gulp-util@~3.0.7:
+gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.6, gulp-util@^3.0.7:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
@@ -7341,6 +7328,12 @@ walk@^2.3.9:
 walkdir@^0.0.11:
   version "0.0.11"
   resolved "https://registry.yarnpkg.com/walkdir/-/walkdir-0.0.11.tgz#a16d025eb931bd03b52f308caed0f40fcebe9532"
+
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  dependencies:
+    loose-envify "^1.0.0"
 
 wd@^1.4.0:
   version "1.4.1"

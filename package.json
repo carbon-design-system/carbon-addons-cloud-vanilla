@@ -10,11 +10,10 @@
     "url": "https://github.com/carbon-design-system/carbon-addons-bluemix"
   },
   "bugs": {
-    "url": "https://github.com/carbon-design-system/carbon-addons-bluemix/issues"
+    "url":
+      "https://github.com/carbon-design-system/carbon-addons-bluemix/issues"
   },
-  "keywords": [
-    "eyeglass-module"
-  ],
+  "keywords": ["eyeglass-module"],
   "dependencies": {
     "lodash.debounce": "^4.0.8"
   },
@@ -31,7 +30,7 @@
     "babel-runtime": "^6.22.0",
     "bluebird": "~3.1.1",
     "browser-sync": "~2.10.0",
-    "carbon-components": "^7.26.5",
+    "carbon-components": "^8.0.0",
     "chai": "^3.5.0",
     "core-js": "^2.4.0",
     "custom-event": "^1.0.0",
@@ -97,7 +96,7 @@
     "vinyl-named": "^1.1.0"
   },
   "peerDependencies": {
-    "carbon-components": "^7.26.5"
+    "carbon-components": "^8.0.0"
   },
   "files": [
     "css/**/*",
@@ -121,13 +120,11 @@
     "test": "gulp test",
     "test:unit": "gulp test:unit",
     "test:a11y": "gulp test:a11y",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --trailing-comma es5 --single-quote --write",
-      "git add"
-    ]
+    "*.js": ["prettier --trailing-comma es5 --single-quote --write", "git add"]
   },
   "config": {
     "commitizen": {
