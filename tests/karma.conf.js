@@ -62,7 +62,7 @@ module.exports = function(config) {
       const list = ensureArray(
         cloptions.files || [
           'node_modules/core-js/modules/es6.weak-map.js', // For generatoring coverage report for untested files
-          'src/{components,globals}/**/*.js', // For generatoring coverage report for untested files
+          'src/components/**/*.js', // For generatoring coverage report for untested files
           'tests/spec/**/*.js',
         ]
       );

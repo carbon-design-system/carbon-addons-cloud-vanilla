@@ -5,7 +5,7 @@ const resolve = require('rollup-plugin-node-resolve');
 const babel = require('rollup-plugin-babel');
 
 module.exports = {
-  entry: 'src/index.js',
+  entry: 'src/bundle.js',
   format: 'iife',
   moduleName: 'CarbonAddonsBluemix',
   plugins: [
