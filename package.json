@@ -1,7 +1,7 @@
 {
   "name": "carbon-addons-bluemix",
   "description": "Carbon Design System add-on for Bluemix products.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "Apache-2.0",
   "module": "es/index.js",
   "main": "umd/index.js",
