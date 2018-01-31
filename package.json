@@ -112,7 +112,7 @@
     "build": "gulp build",
     "build-dev": "gulp build:dev",
     "commitmsg": "validate-commit-msg",
-    "dev": "gulp serve & yarn serve",
+    "dev": "gulp serve & (if [[ -x yarn ]]; then yarn serve; else npm run serve; fi)",
     "lint": "eslint gulpfile.js server.js src tests demo",
     "prebuild": "gulp clean",
     "prepublish": "npm run build",
