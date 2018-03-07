@@ -112,7 +112,6 @@
     {! CarbonComponents still has unified header !}
     {! Need to avoid duplicate instances !}
     CarbonComponents.settings.disableAutoInit = true;
-    CarbonComponents.InteriorLeftNav.init();
     CarbonComponents.OverflowMenu.init();
     CarbonComponents.Tab.init();
   </script>

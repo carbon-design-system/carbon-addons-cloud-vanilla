@@ -4,7 +4,7 @@ import './polyfills/index';
 
 import DemoSwitcher from './js/demo-switcher';
 
-export * from '../src/index';
+export * from '../src/bundle';
 
 function switchTo(name) {
   const selectedLeftNavItem = document.querySelector(
