@@ -1,6 +1,6 @@
 @import 'carbon-components/scss/globals/scss/import-once';
 
-@include exports('account-switcher') {
+@include exports('cloud-account-switcher') {
 
   .bx--account-switcher {
     @include reset;

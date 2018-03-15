@@ -15,7 +15,7 @@
 @import 'carbon-components/scss/components/link/link';
 @import 'mixins';
 
-@include exports('card') {
+@include exports('cloud-card') {
   .bx--card {
     @include reset;
     @include font-family;

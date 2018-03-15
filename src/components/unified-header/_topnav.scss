@@ -1,6 +1,6 @@
 @import 'carbon-components/scss/globals/scss/import-once';
 
-@include exports('topnav') {
+@include exports('cloud-topnav') {
 
   .bx--top-nav {
     @include reset;
