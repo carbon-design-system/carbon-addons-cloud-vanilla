@@ -14,7 +14,7 @@
 @import 'left-nav';
 @import 'account-switcher';
 
-@include exports('unified-header') {
+@include exports('cloud-unified-header') {
   .bx--unified-header {
     @include reset;
     position: fixed;

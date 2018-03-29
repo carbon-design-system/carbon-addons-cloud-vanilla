@@ -1,6 +1,6 @@
 @import 'carbon-components/scss/globals/scss/import-once';
 
-@include exports('global-header') {
+@include exports('cloud-global-header') {
   .bx--global-header {
     @include layer('sticky-nav');
     @include helvetica;

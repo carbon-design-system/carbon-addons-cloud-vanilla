@@ -1,6 +1,6 @@
 @import 'carbon-components/scss/globals/scss/import-once';
 
-@include exports('left-nav') {
+@include exports('cloud-left-nav') {
 
   .bx--global-header__left-nav {
     @include layer('temporary-nav');
