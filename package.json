@@ -1,16 +1,16 @@
 {
-  "name": "carbon-addons-bluemix",
-  "description": "Carbon Design System add-on for Bluemix products.",
-  "version": "0.3.0",
+  "name": "carbon-addons-cloud-vanilla",
+  "description": "Carbon Design System vanilla JavaScript-based add-on for IBM Cloud products.",
+  "version": "9.0.0",
   "license": "Apache-2.0",
   "module": "es/index.js",
   "main": "umd/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/carbon-design-system/carbon-addons-bluemix"
+    "url": "https://github.com/carbon-design-system/carbon-addons-cloud-vanilla"
   },
   "bugs": {
-    "url": "https://github.com/carbon-design-system/carbon-addons-bluemix/issues"
+    "url": "https://github.com/carbon-design-system/carbon-addons-cloud-vanilla/issues"
   },
   "keywords": [
     "eyeglass-module"
@@ -152,7 +152,7 @@
   "eyeglass": {
     "sassDir": "scss",
     "exports": false,
-    "name": "carbon-addons-bluemix",
+    "name": "carbon-addons-cloud-vanilla",
     "needs": "^1.2.1"
   }
 }
