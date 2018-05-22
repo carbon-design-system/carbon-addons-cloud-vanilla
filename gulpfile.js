@@ -156,46 +156,6 @@ gulp.task('scripts:compiled', ['scripts:rollup'], cb => {
  * Sass Tasks
  */
 
-gulp.task('sass:compiled', () => {
-  function buildStyles(prod) {
-    return gulp
-      .src('src/globals/scss/styles.scss')
-      .pipe(sourcemaps.init())
-      .pipe(
-        sass({
-          outputStyle: prod ? 'compressed' : 'expanded',
-          includePaths: ['./node_modules'],
-        }).on('error', sass.logError)
-      )
-      .pipe(
-        autoprefixer({
-          browsers: ['> 1%', 'last 2 versions'],
-        })
-      )
-      .pipe(
-        rename(filePath => {
-          if (filePath.basename === 'styles') {
-            filePath.basename = 'carbon-components';
-          }
-          if (prod) {
-            filePath.extname = `.min${filePath.extname}`;
-          }
-        })
-      )
-      .pipe(
-        sourcemaps.write('.', {
-          includeContent: false,
-          sourceRoot: '../src',
-        })
-      )
-      .pipe(gulp.dest('css'))
-      .pipe(browserSync.stream());
-  }
-
-  buildStyles(); // Expanded CSS
-  buildStyles(true); // Minified CSS
-});
-
 gulp.task('sass:dev', () =>
   gulp
     .src('demo/scss/demo.scss')
@@ -215,12 +175,6 @@ gulp.task('sass:dev', () =>
     .pipe(gulp.dest('demo'))
     .pipe(browserSync.stream())
 );
-
-gulp.task('sass:source', () => {
-  const srcFiles = './src/**/*.scss';
-
-  return gulp.src(srcFiles).pipe(gulp.dest('scss'));
-});
 
 gulp.task('html:source', () => {
   const srcFiles = './src/components/**/*.html';
@@ -280,7 +234,7 @@ gulp.task('test:unit', done => {
   ).start();
 });
 
-gulp.task('test:a11y', ['sass:compiled'], done => {
+gulp.task('test:a11y', done => {
   const componentName = axeArgs.name === undefined ? undefined : axeArgs.name;
   const options = {
     a11yCheckOptions: {
@@ -321,10 +275,9 @@ gulp.task('serve', ['browser-sync', 'watch']);
 
 // Build task collection
 gulp.task('build:scripts', ['scripts:umd', 'scripts:es', 'scripts:compiled']);
-gulp.task('build:styles', ['sass:compiled', 'sass:source']);
 
 // Mapped to npm run build
-gulp.task('build', ['build:scripts', 'build:styles', 'html:source']);
+gulp.task('build', ['build:scripts', 'html:source']);
 
 // For demo environment
 gulp.task('build:dev', ['sass:dev', 'scripts:dev']);
