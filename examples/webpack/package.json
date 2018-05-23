@@ -6,7 +6,8 @@
   },
   "dependencies": {
     "carbon-addons-bluemix": "^0.1.0",
-    "carbon-components": "^7.26.5"
+    "carbon-addons-cloud": "^1.0.0",
+    "carbon-components": "^8.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
