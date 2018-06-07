@@ -31,8 +31,8 @@
     "babel-runtime": "^6.22.0",
     "bluebird": "~3.1.1",
     "browser-sync": "~2.10.0",
-    "carbon-components": "^8.0.0",
-    "carbon-addons-cloud": "^1.0.0",
+    "carbon-components": "^9.0.0",
+    "carbon-addons-cloud": "^2.0.0",
     "chai": "^3.5.0",
     "core-js": "^2.4.0",
     "custom-event": "^1.0.0",
@@ -96,8 +96,8 @@
     "vinyl-named": "^1.1.0"
   },
   "peerDependencies": {
-    "carbon-components": "^7.26.5 || ^8.0.0",
-    "carbon-addons-cloud": "^1.0.0"
+    "carbon-components": "^9.0.0",
+    "carbon-addons-cloud": "^2.0.0"
   },
   "files": [
     "css/**/*",
