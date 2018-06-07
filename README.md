@@ -1,6 +1,6 @@
-# `carbon-addons-bluemix`
+# `carbon-addons-cloud-vanilla`
 
-[![Build Status](https://travis-ci.org/carbon-design-system/carbon-addons-bluemix.svg?branch=master)](https://travis-ci.org/carbon-design-system/carbon-addons-bluemix)
+[![Build Status](https://travis-ci.org/carbon-design-system/carbon-addons-cloud-vanilla.svg?branch=master)](https://travis-ci.org/carbon-design-system/carbon-addons-cloud-vanilla)
 
 > Carbon Design System add-on for Bluemix products. The component library gives
 > developers a collection of re-usable HTML and SCSS partials for building their
@@ -8,12 +8,12 @@
 
 ## Usage
 
-You can install `carbon-addons-bluemix` with either `npm` or `yarn` by doing:
+You can install `carbon-addons-cloud-vanilla` with either `npm` or `yarn` by doing:
 
 ```bash
-npm install carbon-addons-bluemix --save
+npm install carbon-addons-cloud-vanilla --save
 # with yarn
-yarn add carbon-addons-bluemix
+yarn add carbon-addons-cloud-vanilla
 ```
 
 In addition, if you're not currently including `carbon-components` in your
