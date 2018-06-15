@@ -41,3 +41,10 @@ Use these modifiers with `.bx--interior-left-nav` class.
 |------------------------------|-----------------------------------|
 | classActiveLeftNavListItem   | Class for active nav list item    |
 | classExpandedLeftNavListItem | Class for expanded nav list items |
+
+#### Events
+
+| Event Name            | Description                                                                                 | Option to change the event name |
+|-----------------------|---------------------------------------------------------------------------------------------|---------------------------------|
+| left-nav-beingtoggled | Custom event fired before a left nav is toggled. Canceling this event prevents the toggling | eventBeforeLeftNavToggled       |
+| left-nav-toggled      | Custom event fired after a left nav is toggled                                              | eventAfterLeftNavToggled        |
