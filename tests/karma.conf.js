@@ -49,9 +49,7 @@ const travisLaunchers = {
 };
 
 module.exports = function(config) {
-  const objectToStringPolyfillPath = require.resolve(
-    'core-js/library/modules/es6.object.to-string.js'
-  );
+  const objectToStringPolyfillPath = require.resolve('core-js/library/modules/es6.object.to-string.js');
 
   config.set({
     basePath: '..',
@@ -66,17 +64,13 @@ module.exports = function(config) {
           'tests/spec/**/*.js',
         ]
       );
-      const htmlFiles = list.filter(file =>
-        minimatch(file, 'src/components/**/*.html')
-      );
+      const htmlFiles = list.filter(file => minimatch(file, 'src/components/**/*.html'));
       if (htmlFiles.length > 0) {
         const explanationArgs = htmlFiles.map(file => `-f ${file}`).join(' ');
         // eslint-disable-next-line no-console
         console.warn('WARNING: The given files contain component sample HTML.');
         // eslint-disable-next-line no-console
-        console.warn(
-          `You may have wanted:\n\tgulp test:a11y ${explanationArgs}`
-        );
+        console.warn(`You may have wanted:\n\tgulp test:a11y ${explanationArgs}`);
       }
       list.unshift('demo/polyfills/index.js');
       return list;
@@ -114,10 +108,7 @@ module.exports = function(config) {
         commonjs({
           include: ['node_modules/**'],
           namedExports: {
-            'node_modules/bluebird/js/release/bluebird.js': [
-              'delay',
-              'promisify',
-            ],
+            'node_modules/bluebird/js/release/bluebird.js': ['delay', 'promisify'],
           },
         }),
         babel({
@@ -134,10 +125,7 @@ module.exports = function(config) {
               },
             ],
           ],
-          plugins: [
-            'transform-class-properties',
-            ['transform-runtime', { polyfill: false }],
-          ].concat(
+          plugins: ['transform-class-properties', ['transform-runtime', { polyfill: false }]].concat(
             cloptions.debug
               ? []
               : [

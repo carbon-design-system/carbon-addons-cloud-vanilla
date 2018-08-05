@@ -141,15 +141,7 @@ gulp.task('scripts:rollup', cb => {
 gulp.task('scripts:compiled', ['scripts:rollup'], cb => {
   const srcFile = './scripts/carbon-components.js';
 
-  pump(
-    [
-      gulp.src(srcFile),
-      uglify(),
-      rename('carbon-components.min.js'),
-      gulp.dest('scripts'),
-    ],
-    cb
-  );
+  pump([gulp.src(srcFile), uglify(), rename('carbon-components.min.js'), gulp.dest('scripts')], cb);
 });
 
 /**
@@ -248,16 +240,9 @@ gulp.task('test:a11y', done => {
     showOnlyViolations: true,
     exclude: '.offleft, #flex-col, #flex-row',
     tags: ['wcag2aa', 'wcag2a'],
-    folderOutputReport:
-      componentName === undefined ? 'tests/axe/allHtml' : 'tests/axe',
-    saveOutputIn:
-      componentName === undefined
-        ? 'a11y-html.json'
-        : `a11y-${componentName}.json`,
-    urls:
-      componentName === undefined
-        ? ['http://localhost:3000']
-        : [`http://localhost:3000/components/${componentName}/`],
+    folderOutputReport: componentName === undefined ? 'tests/axe/allHtml' : 'tests/axe',
+    saveOutputIn: componentName === undefined ? 'a11y-html.json' : `a11y-${componentName}.json`,
+    urls: componentName === undefined ? ['http://localhost:3000'] : [`http://localhost:3000/components/${componentName}/`],
   };
 
   return axe(options, done);
@@ -284,7 +269,5 @@ gulp.task('build:dev', ['sass:dev', 'scripts:dev']);
 
 gulp.task('default', () => {
   // eslint-disable-next-line no-console
-  console.log(
-    '\n\n Please use `$ npm run dev` and navigate to \n http://localhost:3000 to view project locally \n\n'
-  );
+  console.log('\n\n Please use `$ npm run dev` and navigate to \n http://localhost:3000 to view project locally \n\n');
 });
