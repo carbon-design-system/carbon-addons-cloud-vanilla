@@ -203,8 +203,6 @@ module.exports = function(config) {
                   // That said, new files should never be added, except for misc code that is very broser-specific
                   'src/components/detail-page-header/detail-page-header.js',
                   'src/components/interior-left-nav/interior-left-nav.js',
-                  'src/components/unified-header/left-nav.js',
-                  'src/components/unified-header/profile-switcher.js',
                 ],
               },
             },

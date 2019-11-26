@@ -109,7 +109,6 @@
   <!-- false = JavaScript will initialize automatically -->
   <script>
     CarbonAddonsBluemix.settings.disableAutoInit = false;
-    {! CarbonComponents still has unified header !}
     {! Need to avoid duplicate instances !}
     CarbonComponents.settings.disableAutoInit = true;
     CarbonComponents.OverflowMenu.init();
