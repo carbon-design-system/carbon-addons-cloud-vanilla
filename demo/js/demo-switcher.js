@@ -30,9 +30,9 @@ export default class DemoSwitcher {
     ) {
       this.create(target);
     } else {
-      [...target.querySelectorAll('[data-demo-switcher]')].forEach(element =>
-        this.create(element)
-      );
+      [...target.querySelectorAll('[data-demo-switcher]')].forEach(element => {
+        this.create(element);
+      });
     }
   }
 
